@@ -1,52 +1,41 @@
 
 import urllib.request as urllib2
 import json
-
-
-class BearerAccessTokenAuthorization:
-    def __init__(self, access_token):
-        self.headers = {'Authorization': 'Bearer {}'.format(access_token)}
-
-
-class OAuth2ClientAuthorization:
-    def __init__(self, api, kwargs):
-        self.api = api
-        self.client_id = kwargs.get('client_id')
-        self.client_secret = kwargs.get('client_secret')
-        self.headers = BearerAccessTokenAuthorization(self.get_access_token()).headers
-
-    def get_access_token(self):
-        url = self.api + "/oauth/token?client_id={}&client_secret={}&grant_type=client_credentials".format(
-            self.client_id, self.client_secret)
-        response = urllib2.urlopen(urllib2.Request(url, headers={}))
-        data = json.load(response)
-
-        return data['access_token']
-
-
-def validate(kwargs, api):
-    if not api:
-        raise Exception("API is required")
-
-    if not kwargs.get('access_token') and not (kwargs.get('grant_type') and kwargs.get('client_id') and kwargs.get('client_secret')):
-        raise Exception("Insufficient authentication details. Either Access token is required or client id, secret, grant type are required")
+import base64
 
 
 class CitesphereConnector:
-    def __init__(self, api, **kwargs):
+    def __init__(self, api, auth_token_object):
         self.api = api
-        validate(kwargs, api)
-        self.oauth_object = self.get_oauth_object(kwargs)
+        self.auth_token_object = auth_token_object
+        self.validate()
+        self.handle_api_params()
 
-    def get_oauth_object(self, kwargs):
-        if kwargs.get('grant_type') == "client_credentials":
-            return OAuth2ClientAuthorization(self.api, kwargs)
-        else:
-            return BearerAccessTokenAuthorization(kwargs.get('access_token'))
+    def validate(self):
+        if not hasattr(self.auth_token_object, 'authType'):
+            raise AttributeError('Missing authType attribute')
+
+        if not hasattr(self.auth_token_object, 'headers'):
+            raise AttributeError('Missing headers attribute')
+
+        if not hasattr(self.auth_token_object, 'access_token'):
+            if not hasattr(self.auth_token_object, 'username') and not hasattr(self.auth_token_object, 'password'):
+                raise AttributeError('Either username and password or access_token should be present')
+
+        if not self.auth_token_object.authType == 'oauth' and not self.auth_token_object.authType == 'basic':
+            raise Exception("authType should be either oauth or basic")
+
+    def handle_api_params(self):
+        if self.auth_token_object.authType == "oauth":
+            self.auth_token_object.headers = {'Authorization': 'Bearer {}'.format(self.auth_token_object.access_token)}
+        elif self.auth_token_object.authType == "basic":
+            auth_str = '{}:{}'.format(self.auth_token_object.username, self.auth_token_object.password)
+            auth_b64 = base64.b64encode(auth_str.encode('ascii'))
+            self.auth_token_object.headers = {'Authorization': 'Basic {}'.format(auth_b64)}
 
     def execute_command(self, url):
         try:
-            response = urllib2.urlopen(urllib2.Request(url, headers=self.oauth_object.headers))
+            response = urllib2.urlopen(urllib2.Request(url, headers=self.auth_token_object.headers))
             data = json.load(response)
 
             return data
