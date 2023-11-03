@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Citesphere</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="_csrf" content="26236e04-3ce5-42db-b4a4-97f1ef09a225"/>
+<meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Fira+Sans'
+	rel='stylesheet' type='text/css'>
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/citesphere-review/resources/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link
+	href="/citesphere-review/resources/bootstrap/assets/css/ie10-viewport-bug-workaround.css"
+	type="text/css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="/citesphere-review/resources/bootstrap/grid.css" type="text/css"
+	rel="stylesheet">
+<link href="/citesphere-review/resources/diging-icon-pack/diging-icon-pack.css" type="text/css"
+	rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="<c:url value="/resources/bootstrap/assets/js/ie8-responsive-file-warning.js" />"></script><![endif]-->
+<script
+	src="/citesphere-review/resources/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/citesphere-review/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="/citesphere-review/resources/bootstrap/js/main.js"></script>
+<script src="/citesphere-review/resources/notify/bootstrap-notify.min.js"></script>
+<link href="/citesphere-review/resources/notify/animate.css" rel="stylesheet"/>
+<script>
+
+$(function() {
+	$(".delete-link").click(function(event) {
+		var id = $(this).data('group-id');
+		$("#delete-client-button").attr("data-group-id", id);
+		$("#confirm-client-entry-id").text(id);
+		$('#client-delete-confirmation').modal("show");	
+		event.preventDefault();
+	});
+	$("#delete-client-button").click(function() {
+		var id = $(this).data("group-id");
+		var baseurl = 'auth/group/' + id + '/resync';
+		$.ajax({
+			'url': baseurl,
+			'type': "POST",
+			'data': { "_csrf" : "26236e04-3ce5-42db-b4a4-97f1ef09a225" },
+			'success': function(data) {
+				$.notify('<i class="fas fa-check-circle"></i> Local copy of group has been deleted. Re-sync will start as soon as group is accessed again.', {
+					type: 'success',
+					offset: {
+						x: 50,
+						y: 90
+					},
+					animate: {
+						enter: 'animated fadeInRight',
+						exit: 'animated fadeOutRight'
+					}
+				});
+			},
+			'error': function(data) {
+				$.notify('<i class="fas fa-exclamation-circle"></i> Group not found.', {
+					type: 'danger',
+					offset: {
+						x: 50,
+						y: 90
+					},
+					animate: {
+						enter: 'animated fadeInRight',
+						exit: 'animated fadeOutRight'
+					}
+				});
+			}
+		});
+		$('#client-delete-confirmation').modal("hide");
+		event.preventDefault();
+		$(this).removeData();
+	});
+});
+
+
+</script>
+</head>
+
+<body style="padding-bottom: 20px;">
+	<div class="container">
+		<div class="page-header">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation"><a href="/citesphere-review/">Home</a></li>
+
+					
+					
+					
+					
+					
+					
+					
+						
+					
+
+				</ul>
+
+			</nav>
+
+			<h1>
+				<a class="appName" href="/">Citesphere</a>
+			</h1>
+		</div>
+
+
+		
+
+		<!-- Content -->
+		<div>
+		<div class="jumbotron col-md-12">
+
+			<h1>Welcome to Citesphere!</h1>
+			<p>If you try and take a cat apart to see how it works, the first
+				thing you have on your hands is a nonworking cat.</p>
+		</div>
+		
+	</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<hr style="margin-bottom: 25px;">
+					<p class="text-muted pull-left">
+						Version: v42.0.0
+					</p>
+
+					<p class="text-muted">
+					<form name='f'
+						class="form-inline pull-right" action="/citesphere-review/login/authenticate"
+						method="POST"><input type="hidden" name="_csrf" value="26236e04-3ce5-42db-b4a4-97f1ef09a225"/>
+						Login: <input type="hidden" name="_csrf"
+							value="26236e04-3ce5-42db-b4a4-97f1ef09a225" /> <input placeholder="Username"
+							class="form-control input-sm" type="text" id="username"
+							name="username" /> <input placeholder="Password"
+							class="form-control input-sm" type="password" id="password"
+							name="password" />
+						<button type="submit" class="btn btn-default btn-sm">Log
+							in</button>
+						<a href="/citesphere-review/register" class="btn btn-primary btn-sm">Sign
+							Up</a><br> <a href="/citesphere-review/login/reset"><small>Forgot
+								Password?</small></a>
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
