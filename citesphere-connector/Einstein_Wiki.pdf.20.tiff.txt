@@ -1,0 +1,57 @@
+4/18/23, 9:15 AM Albert Einstein - Wikipedia
+Following the discovery of the recession of the nebulae by Edwin
+Hubble in 1929, Einstein abandoned his static model of the
+universe, and proposed two dynamic models of the cosmos, The
+Friedmann—Einstein universe of 1931!242![243] and the Einstein—
+de Sitter universe of 1932.!244/l245] In each of these models,
+Einstein discarded the cosmological constant, claiming that it was
+"in any case theoretically unsatisfactory" 242/[243/1246]
+
+ 
+
+In many Einstein biographies, it is claimed that Einstein referred
+to the cosmological constant in later years as his "biggest blunder", & =
+based on a letter George Gamow claimed to have received from __E/insiein with Millikan and Georges
+
+him. The astrophysicist Mario Livio has recently cast doubt on this — Lemaitre at the California Institute of
+claim. |247] Technology in January 1933
+
+ 
+
+In late 2013, a team led by the Irish physicist Cormac
+
+O'Raifeartaigh discovered evidence that, shortly after learning of Hubble's observations of the
+recession of the nebulae, Einstein considered a steady-state model of the universe.!248/I249] In a
+hitherto overlooked manuscript, apparently written in early 1931, Einstein explored a model of the
+expanding universe in which the density of matter remains constant due to a continuous creation of
+matter, a process he associated with the cosmological constant.!25°/l251] As he stated in the paper, "In
+what follows, I would like to draw attention to a solution to equation (1) that can account for Hubbel's
+[sic] facts, and in which the density is constant over time" ... "If one considers a physically bounded
+volume, particles of matter will be continually leaving it. For the density to remain constant, new
+particles of matter must be continually formed in the volume from space."
+
+It thus appears that Einstein considered a steady-state model of the expanding universe many years
+before Hoyle, Bondi and Gold.!252/[253! However, Einstein's steady-state model contained a
+fundamental flaw and he quickly abandoned the idea./250/l251)12541
+
+Energy momentum pseudotensor
+
+General relativity includes a dynamical spacetime, so it is difficult to see how to identify the conserved
+energy and momentum. Noether's theorem allows these quantities to be determined from a
+Lagrangian with translation invariance, but general covariance makes translation invariance into
+something of a gauge symmetry. The energy and momentum derived within general relativity by
+Noether's prescriptions do not make a real tensor for this reason.
+
+Einstein argued that this is true for a fundamental reason: the gravitational field could be made to
+vanish by a choice of coordinates. He maintained that the non-covariant energy momentum
+pseudotensor was, in fact, the best description of the energy momentum distribution in a gravitational
+field. This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become
+standard.
+
+The use of non-covariant objects like pseudotensors was heavily criticized in 1917 by Erwin
+Schrodinger and others.
+
+Wormholes
+
+https://en.wikipedia.org/wiki/Albert_Einstein 21/54
+�
