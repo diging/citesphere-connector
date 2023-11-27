@@ -69,13 +69,12 @@ class CitesphereConnector:
     def get_collections(self, zotero_group_id):
         url = self.api + "/v1/groups/{}/collections".format(zotero_group_id)
         return self.execute_command(url)
-    
-    def get_collection_items_pg(self, zotero_group_id, collection_id,pg_number):
-        url = self.api + "/v1/groups/{}/collections/{}/items?&page={}".format(zotero_group_id, collection_id,pg_number)
-        return self.execute_command(url)
 
-    def get_collection_items(self, zotero_group_id, collection_id):
-        url = self.api + "/v1/groups/{}/collections/{}/items".format(zotero_group_id, collection_id)
+    def get_collection_items(self, zotero_group_id, collection_id,page_number=0):
+        if page_number:
+            url = self.api + "/v1/groups/{}/collections/{}/items?&page={}".format(zotero_group_id, collection_id,page_number)
+        else:
+            url = self.api + "/v1/groups/{}/collections/{}/items".format(zotero_group_id, collection_id)
         return self.execute_command(url)
 
     def get_item_info(self, zotero_group_id, item_id):
