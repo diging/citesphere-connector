@@ -1,0 +1,51 @@
+4/18/23, 9:15 AM Albert Einstein - Wikipedia
+
+In 1935, Einstein collaborated with Nathan Rosen to produce a model of a wormhole, often called
+Einstein—Rosen bridges.!255!l256] His motivation was to model elementary particles with charge as a
+solution of gravitational field equations, in line with the program outlined in the paper "Do
+Gravitational Fields play an Important Role in the Constitution of the Elementary Particles?"”. These
+solutions cut and pasted Schwarzschild black holes to make a bridge between two patches. !257!
+
+If one end of a wormhole was positively charged, the other end would be negatively charged. These
+properties led Einstein to believe that pairs of particles and antiparticles could be described in this
+way.
+
+Einstein—Cartan theory
+
+In order to incorporate spinning point particles into general relativity, the
+affine connection needed to be generalized to include an antisymmetric
+part, called the torsion. This modification was made by Einstein and
+Cartan in the 1920s.
+
+Equations of motion
+
+The theory of general relativity has a fundamental law—the Einstein field
+equations, which describe how space curves. The geodesic equation,
+which describes how particles move, may be derived from the Einstein
+field equations.
+
+ 
+
+Einstein at his office,
+University of Berlin, 1920
+
+Since the equations of general relativity are non-linear, a lump of energy
+made out of pure gravitational fields, like a black hole, would move on a
+trajectory which is determined by the Einstein field equations themselves,
+not by a new law. So Einstein proposed that the path of a singular solution, like a black hole, would be
+determined to be a geodesic from general relativity itself.
+
+This was established by Einstein, Infeld, and Hoffmann for pointlike objects without angular
+momentum, and by Roy Kerr for spinning objects.
+
+Old quantum theory
+
+Photons and energy quanta
+
+In a 1905 paper,!21] Einstein postulated that light itself consists of localized particles (quanta).
+Einstein's light quanta were nearly universally rejected by all physicists, including Max Planck and
+Niels Bohr. This idea only became universally accepted in 1919, with Robert Millikan's detailed
+experiments on the photoelectric effect, and with the measurement of Compton scattering.
+
+https://en.wikipedia.org/wiki/Albert_Einstein 22/54
+�

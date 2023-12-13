@@ -1,0 +1,40 @@
+4/18/23, 9:15 AM Albert Einstein - Wikipedia
+https://en.wikipedia.org/wiki/Albert_Einstein 20/54
+motion, and that for a free-falling observer the rules of special relativity must apply. This argument is
+called the equivalence principle. In the same article, Einstein also predicted the phenomena of
+gravitational time dilation, gravitational redshift and gravitational lensing.[226][227]
+In 1911, Einstein published another article "On the Influence of Gravitation on the Propagation of
+Light" expanding on the 1907 article, in which he estimated the amount of deflection of light by
+massive bodies. Thus, the theoretical prediction of general relativity could for the first time be tested
+experimentally.[228]
+In 1916, Einstein predicted gravitational waves,[229][230] ripples in the curvature of spacetime which
+propagate as waves, traveling outward from the source, transporting energy as gravitational radiation.
+The existence of gravitational waves is possible under general relativity due to its Lorentz invariance
+which brings the concept of a finite speed of propagation of the physical interactions of gravity with it.
+By contrast, gravitational waves cannot exist in the Newtonian theory of gravitation, which postulates
+that the physical interactions of gravity propagate at infinite speed.
+The first, indirect, detection of gravitational waves came in the 1970s through observation of a pair of
+closely orbiting neutron stars, PSR B1913+16.[231] The explanation for the decay in their orbital period
+was that they were emitting gravitational waves.[231][232] Einstein's prediction was confirmed on 11
+February 2016, when researchers at LIGO published the first observation of gravitational waves,[233]
+detected on Earth on 14 September 2015, nearly one hundred years after the
+prediction.[231][234][235][236][237]
+While developing general relativity, Einstein became confused about the gauge invariance in the
+theory. He formulated an argument that led him to conclude that a general relativistic field theory is
+impossible. He gave up looking for fully generally covariant tensor equations and searched for
+equations that would be invariant under general linear transformations only.
+In June 1913, the Entwurf ('draft') theory was the result of these investigations. As its name suggests,
+it was a sketch of a theory, less elegant and more difficult than general relativity, with the equations of
+motion supplemented by additional gauge fixing conditions. After more than two years of intensive
+work, Einstein realized that the hole argument was mistaken[238] and abandoned the theory in
+November 1915.
+In 1917, Einstein applied the general theory of relativity to the structure of the universe as a
+whole.[239] He discovered that the general field equations predicted a universe that was dynamic,
+either contracting or expanding. As observational evidence for a dynamic universe was not known at
+the time, Einstein introduced a new term, the cosmological constant, to the field equations, in order to
+allow the theory to predict a static universe. The modified field equations predicted a static universe of
+closed curvature, in accordance with Einstein's understanding of Mach's principle in these years. This
+model became known as the Einstein World or Einstein's static universe.[240][241]
+Gravitational waves
+Hole argument and Entwurf theory
+Physical cosmology

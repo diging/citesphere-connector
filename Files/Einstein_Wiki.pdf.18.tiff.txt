@@ -1,0 +1,57 @@
+4/18/23, 9:15 AM Albert Einstein - Wikipedia
+
+zero, leading to large fluctuations. The effect of density fluctuations is that light of all wavelengths is
+scattered, making the fluid look milky white. Einstein relates this to Rayleigh scattering, which is what
+happens when the fluctuation size is much smaller than the wavelength, and which explains why the
+sky is blue.!22°] Einstein quantitatively derived critical opalescence from a treatment of density
+fluctuations, and demonstrated how both the effect and Rayleigh scattering originate from the
+atomistic constitution of matter.
+
+Special relativity
+
+Einstein's "Zur Elektrodynamik bewegter Kérper"!215! ("On the Electrodynamics of Moving Bodies")
+was received on 30 June 1905 and published 26 September of that same year. It reconciled conflicts
+between Maxwell's equations (the laws of electricity and magnetism) and the laws of Newtonian
+mechanics by introducing changes to the laws of mechanics.!224 Observationally, the effects of these
+changes are most apparent at high speeds (where objects are moving at speeds close to the speed of
+light). The theory developed in this paper later became known as Einstein's special theory of relativity.
+
+This paper predicted that, when measured in the frame of a relatively moving observer, a clock carried
+by a moving body would appear to slow down, and the body itself would contract in its direction of
+motion. This paper also argued that the idea of a luminiferous aether—one of the leading theoretical
+entities in physics at the time—was superfluous.2° 4!
+
+In his paper on mass-energy equivalence, Einstein produced E = mc? as a consequence of his special
+relativity equations.!222! Einstein's 1905 work on relativity remained controversial for many years, but
+was accepted by leading physicists, starting with Max Planck,!2*e 51l223]
+
+Einstein originally framed special relativity in terms of kinematics (the study of moving bodies). In
+1908, Hermann Minkowski reinterpreted special relativity in geometric terms as a theory of
+spacetime. Einstein adopted Minkowski's formalism in his 1915 general theory of relativity.!224!
+
+General relativity
+
+General relativity and the equivalence principle
+
+General relativity (GR) is a theory of gravitation that was developed by
+Einstein between 1907 and 1915. According to it, the observed
+gravitational attraction between masses results from the warping of
+spacetime by those masses. General relativity has developed into an
+essential tool in modern astrophysics, it provides the foundation for the
+current understanding of black holes, regions of space where gravitational
+attraction is so strong that not even light can escape.
+
+As Einstein later said, the reason for the development of general relativity
+was that the preference of inertial motions within special relativity was
+unsatisfactory, while a theory which from the outset prefers no state of
+motion (even accelerated ones) should appear more satisfactory.!25! Eddington's photograph of
+Consequently, in 1907 he published an article on acceleration under = colar eclipse.
+
+special relativity. In that article titled "On the Relativity Principle and the
+
+Conclusions Drawn from It", he argued that free fall is really inertial
+
+ 
+
+https://en.wikipedia.org/wiki/Albert_Einstein 19/54
+�
