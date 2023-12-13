@@ -1,17 +1,8 @@
 import unittest
 from unittest.mock import Mock, patch, MagicMock
 from CitesphereConnector import CitesphereConnector
+from authObject import AuthObject
 from http import HTTPStatus
-
-
-class authObject:
-    def __init__(self, authType=None, headers=None, username=None, password=None, access_token=None):
-        self.authType = authType
-        self.headers = headers
-        self.username = username
-        self.password = password
-        self.access_token = access_token
-
 
 class EmptyObject:
     pass
@@ -19,7 +10,7 @@ class EmptyObject:
 
 class CitesphereConnectorTest(unittest.TestCase):
     def test_validate_method(self):
-        auth_object = authObject()
+        auth_object = AuthObject()
         with self.assertRaises(Exception):
             CitesphereConnector("example.com", auth_object)
         pass
@@ -32,7 +23,7 @@ class CitesphereConnectorTest(unittest.TestCase):
 
     @patch('CitesphereConnector.CitesphereConnector.get_groups')
     def test_api_called(self, mock_get_groups):
-        auth_object = authObject()
+        auth_object = AuthObject()
         auth_object.authType = 'oauth'
         mock_get_groups.return_value = Mock()
         mock_get_groups.return_value.json.return_value = [{'name': "vogon", 'id': 1}]
