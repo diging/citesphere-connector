@@ -1,4 +1,3 @@
-
 import urllib.request as urllib2
 import json
 import base64
@@ -71,8 +70,10 @@ class CitesphereConnector:
         url = self.api + "/v1/groups/{}/collections".format(zotero_group_id)
         return self.execute_command(url)
 
-    def get_collection_items(self, zotero_group_id, collection_id):
+    def get_collection_items(self, zotero_group_id, collection_id,page_number=0):
         url = self.api + "/v1/groups/{}/collections/{}/items".format(zotero_group_id, collection_id)
+        if page_number:
+            url = url+"?&page={}".format(page_number)  
         return self.execute_command(url)
 
     def get_item_info(self, zotero_group_id, item_id):
