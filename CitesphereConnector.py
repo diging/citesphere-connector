@@ -42,40 +42,61 @@ class CitesphereConnector:
             return {"error_message": str(exc)}
 
     def get_user(self):
-        url = self.api + "/v1/user"
+        url = f"{self.api}/v1/user"
         return self.execute_command(url)
 
     def check_test(self):
-        url = self.api + "/v1/test"
+        url = f"{self.api}/v1/test"
+        return self.execute_command(url)
+    
+    def check_access(self, document_id):
+        url = f"{self.api}/files/giles/{document_id}/access/check"
         return self.execute_command(url)
 
     # Common method to get data based on endpoint
     def get_data_by_endpoint(self, end_point):
-        url = self.api + "/v1" + end_point
+        url = f"{self.api}/v1{end_point}"
         return self.execute_command(url)
 
     def get_groups(self):
-        url = self.api + "/v1/groups"
+        url = f"{self.api}/v1/groups"
         return self.execute_command(url)
 
     def get_group_info(self, group_id):
-        url = self.api + "/v1/groups/{}".format(group_id)
+        url = f"{self.api}/v1/groups/{group_id}"
         return self.execute_command(url)
 
     def get_group_items(self, zotero_group_id):
-        url = self.api + "/v1/groups/{}/items".format(zotero_group_id)
+        url = f"{self.api}/v1/groups/{zotero_group_id}/items"
         return self.execute_command(url)
 
     def get_collections(self, zotero_group_id):
-        url = self.api + "/v1/groups/{}/collections".format(zotero_group_id)
+        url = f"{self.api}/v1/groups/{zotero_group_id}/collections"
         return self.execute_command(url)
 
-    def get_collection_items(self, zotero_group_id, collection_id,page_number=0):
-        url = self.api + "/v1/groups/{}/collections/{}/items".format(zotero_group_id, collection_id)
+    def get_collection_items(self, zotero_group_id, collection_id, page_number=0):
+        url = f"{self.api}/v1/groups/{zotero_group_id}/collections/{collection_id}/items"
         if page_number:
-            url = url+"?&page={}".format(page_number)  
+            url = f"{url}?&page={page_number}"  
         return self.execute_command(url)
 
     def get_item_info(self, zotero_group_id, item_id):
-        url = self.api + "/v1/groups/{}/items/{}".format(zotero_group_id, item_id)
+        url = f"{self.api}/v1/groups/{zotero_group_id}/items/{item_id}"
         return self.execute_command(url)
+
+    def get_profile(self):
+        url = f"{self.api}/v1/job/info"
+        return self.execute_command(url)
+    
+    def get_collections_by_collection_id(self, zotero_group_id, collection_id):
+        url = f"{self.api}/groups/{zotero_group_id}/collections/{collection_id}/collections"
+        return self.execute_command(url)
+    
+    def upload_file(self):
+        url = f"{self.api}/v1/upload"
+        return self.execute_command(url)
+
+    def add_item(self, group_id):
+        url = f"{self.api}/v1/groups/{group_id}/items/create"
+        return self.execute_command(url)
+    
