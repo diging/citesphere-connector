@@ -83,17 +83,9 @@ class CitesphereConnector:
     def get_item_info(self, zotero_group_id, item_id):
         url = f"{self.api}/v1/groups/{zotero_group_id}/items/{item_id}"
         return self.execute_command(url)
-
-    def get_profile(self):
-        url = f"{self.api}/v1/job/info"
-        return self.execute_command(url)
     
     def get_collections_by_collection_id(self, zotero_group_id, collection_id):
         url = f"{self.api}/groups/{zotero_group_id}/collections/{collection_id}/collections"
-        return self.execute_command(url)
-    
-    def upload_file(self):
-        url = f"{self.api}/v1/upload"
         return self.execute_command(url)
 
     def add_item(self, group_id):
