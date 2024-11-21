@@ -1,8 +1,8 @@
 import unittest
-from unittest.mock import Mock, patch, MagicMock
-from CitesphereConnector import CitesphereConnector
-from authObject import AuthObject
-from http import HTTPStatus
+from unittest.mock import Mock, patch
+from src.CitesphereConnector import CitesphereConnector
+from src.authentication import AuthObject
+
 
 class EmptyObject:
     pass
@@ -21,17 +21,17 @@ class CitesphereConnectorTest(unittest.TestCase):
             CitesphereConnector("example.com", auth_object)
         pass
 
-    @patch('CitesphereConnector.CitesphereConnector.get_groups')
+    @patch("CitesphereConnector.CitesphereConnector.get_groups")
     def test_api_called(self, mock_get_groups):
         auth_object = AuthObject()
-        auth_object.authType = 'oauth'
+        auth_object.authType = "oauth"
         mock_get_groups.return_value = Mock()
-        mock_get_groups.return_value.json.return_value = [{'name': "vogon", 'id': 1}]
+        mock_get_groups.return_value.json.return_value = [{"name": "vogon", "id": 1}]
         connector = CitesphereConnector("example.com", auth_object)
         print(connector.get_groups())
-        self.assertEqual(connector.get_groups()[0]['id'], 1)
+        self.assertEqual(connector.get_groups()[0]["id"], 1)
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
