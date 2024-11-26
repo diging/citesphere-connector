@@ -1,6 +1,8 @@
 import urllib.request as urllib2
 import json
 import base64
+import requests
+import os
 
 
 class CitesphereConnector:
@@ -34,16 +36,14 @@ class CitesphereConnector:
     def handle_api_params(self):
         if self.auth_token_object.authType == "oauth":
             self.auth_token_object.headers = {
-                "Authorization": "Bearer {}".format(self.auth_token_object.access_token)
+                "Authorization": f"Bearer {self.auth_token_object.access_token}",
             }
         elif self.auth_token_object.authType == "basic":
-            auth_str = "{}:{}".format(
-                self.auth_token_object.username, self.auth_token_object.password
+            auth_str = (
+                f"{self.auth_token_object.username}:{self.auth_token_object.password}"
             )
             auth_b64 = base64.b64encode(auth_str.encode("ascii"))
-            self.auth_token_object.headers = {
-                "Authorization": "Basic {}".format(auth_b64)
-            }
+            self.auth_token_object.headers = {"Authorization": f"Basic {auth_b64}"}
 
     def execute_command(self, url):
         try:
@@ -53,6 +53,18 @@ class CitesphereConnector:
             data = json.load(response)
 
             return data
+        except Exception as exc:
+            return {"error_message": str(exc)}
+
+    def execute_post_request(self, url, data, files):
+        try:
+            response = requests.post(
+                url, headers=self.auth_token_object.headers, data=data, files=files
+            )
+            print(response.status_code)
+            # Uncomment for debugging response from Citesphere
+            # print(response.text)
+            return response
         except Exception as exc:
             return {"error_message": str(exc)}
 
@@ -105,10 +117,15 @@ class CitesphereConnector:
         url = f"{self.api}/groups/{zotero_group_id}/collections/{collection_id}/collections"
         return self.execute_command(url)
 
-    def add_item(self, group_id, file_path):
-        # with open(file_path, "rb") as file:
-        # files = {"file": file}
-        # response = requests.post(url, files=files)
+    def add_item(self, group_id, data, file_path):
+        try:
+            with open(file_path, "rb") as file_obj:
+                files = [(os.path.basename(file_path), file_obj)]
+                request_files = [
+                    ("files", (name, file, "application/pdf")) for name, file in files
+                ]
+                url = f"{self.api}/v1/groups/{group_id}/items/create"
 
-        url = f"{self.api}/v1/groups/{group_id}/items/create"
-        return self.execute_command(url)
+                return self.execute_post_request(url, data, request_files)
+        except Exception as e:
+            print(f"[ERROR] -------- Error during API request with {file_path}: {e}")
