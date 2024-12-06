@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "citesphere-connector"
 version = "1.0.0"
@@ -15,21 +19,18 @@ dependencies = [
 ]
 requires-python = ">= 3.9"
 authors = [
+    {name = "Digital Innovation Group", email = "diging@asu.edu"},
     {name = "Julia Damerow", email = "jdamerow@asu.edu"},
-    {name = "Julian Ophals", email = "jophals@asu.edu"},
-    {name = "Vishnu Vardhan Sanikommu", email = "vrsaniko@asu.edu"},
-    {name = "Ajay Yadav", email = "ayadav55@asu.edu"},
 ]
 maintainers = [
     {name = "Julia Damerow", email = "jdamerow@asu.edu"},
-    {name = "Julian Ophals", email = "jophals@asu.edu"},
 ]
 description = "Connect to Citesphere, an application that enables superior management of Zotero citations"
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = ["cite", "diging", "citesphere", "sphere", "zotero"]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 3 - Alpha",
   "Intended Audience :: Research Software Engineers, Researchers, Data Scientists, Developers",
   "Topic :: Reserach Software Engineering :: Citation Manager",
   "Programming Language :: Python",
@@ -37,3 +38,4 @@ classifiers = [
 
 [project.urls]
 "Citesphere API" = "https://documenter.getpostman.com/view/19365454/UVeMJiyx"
+"Citesphere" = "https://diging-dev.asu.edu/citesphere-review/"
