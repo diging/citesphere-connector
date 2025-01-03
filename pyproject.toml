@@ -5,19 +5,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "citesphere-connector"
 version = "1.0.0"
-dependencies = [
-    "cfgv",
-    "distlib",
-    "filelock",
-    "identify",
-    "nodeenv",
-    "platformdirs",
-    "pre_commit",
-    "PyYAML",
-    "ruff",
-    "virtualenv",
-]
-requires-python = ">= 3.9"
 authors = [
     {name = "Digital Innovation Group", email = "diging@asu.edu"},
     {name = "Julia Damerow", email = "jdamerow@asu.edu"},
@@ -35,7 +22,3 @@ classifiers = [
   "Topic :: Reserach Software Engineering :: Citation Manager",
   "Programming Language :: Python",
 ]
-
-[project.urls]
-"Citesphere API" = "https://documenter.getpostman.com/view/19365454/UVeMJiyx"
-"Citesphere" = "https://diging-dev.asu.edu/citesphere-review/"

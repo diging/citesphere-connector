@@ -28,9 +28,4 @@ setup(
     keywords="cite, diging, citesphere, sphere, zotero",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    python_requires=">=3.9",
-    project_urls={
-        "Citesphere API": "https://documenter.getpostman.com/view/19365454/UVeMJiyx",
-        "Citesphere": "https://diging-dev.asu.edu/citesphere-review/",
-    },
 )
