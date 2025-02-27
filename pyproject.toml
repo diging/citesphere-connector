@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citesphere-connector"
+version = "1.0.0"
+authors = [
+    {name = "Digital Innovation Group", email = "diging@asu.edu"},
+    {name = "Julia Damerow", email = "jdamerow@asu.edu"},
+]
+maintainers = [
+    {name = "Julia Damerow", email = "jdamerow@asu.edu"},
+]
+description = "Connect to Citesphere, an application that enables superior management of Zotero citations"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["cite", "diging", "citesphere", "sphere", "zotero"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Research Software Engineers, Researchers, Data Scientists, Developers",
+  "Topic :: Reserach Software Engineering :: Citation Manager",
+  "Programming Language :: Python",
+]
