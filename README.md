@@ -16,12 +16,12 @@ Navigate to the project root and download package dependencies `pip install -r r
 
 Install the pre-commit git hooks `pre-commit install`
 
-For retrieivng the Bearer access token required for endpoint method calls, please see the following OAuth2 [documentation] (https://diging.atlassian.net/wiki/spaces/OAC/pages/3533078792/Getting+OAuth2+Access+Token+in+Postman) for Citesphere
+For retrieivng the Bearer access token required for endpoint method calls, please see the following OAuth2 [documentation](https://diging.atlassian.net/wiki/spaces/OAC/pages/3533078792/Getting+OAuth2+Access+Token+in+Postman) for Citesphere
 
 
 ## User Guide
 
-Retrieve Bearer access token required for endpoint method calls: [documentation] (https://diging.atlassian.net/wiki/spaces/OAC/pages/3533078792/Getting+OAuth2+Access+Token+in+Postman)
+Retrieve Bearer access token required for endpoint method calls: [documentation](https://diging.atlassian.net/wiki/spaces/OAC/pages/3533078792/Getting+OAuth2+Access+Token+in+Postman)
 
 
 ### Downloading Files
