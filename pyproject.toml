@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "citesphere-connector"
@@ -14,7 +14,9 @@ maintainers = [
 ]
 description = "Connect to Citesphere, an application that enables superior management of Zotero citations"
 readme = "README.md"
-license = {file = "LICENSE"}
+requires-python = ">=3.8"
+license = "MPL 2.0"
+license-files = ["LICENSE"]
 keywords = ["cite", "diging", "citesphere", "sphere", "zotero"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -22,3 +24,6 @@ classifiers = [
   "Topic :: Reserach Software Engineering :: Citation Manager",
   "Programming Language :: Python",
 ]
+
+[tool.hatch.build]
+include = ["src/*"]
