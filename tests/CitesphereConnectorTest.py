@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, mock_open
 from src.CitesphereConnector import CitesphereConnector
-from src.authentication import AuthObject
+from AuthObject import AuthObject
 
 
 class EmptyObject:
