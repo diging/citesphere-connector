@@ -27,7 +27,7 @@ class CitesphereConnector:
 
         if (
             not self.auth_object.auth_type == "oauth"
-            and not self.auth_object.authype == "basic"
+            and not self.auth_object.auth_type == "basic"
         ):
             raise Exception("auth_type should be either oauth or basic")
 
