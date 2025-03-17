@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, mock_open
 from src.CitesphereConnector import CitesphereConnector
-from src.authentication import AuthObject
+from src.AuthObject import AuthObject
 
 
 class EmptyObject:
@@ -11,7 +11,7 @@ class EmptyObject:
 class CitesphereConnectorTest(unittest.TestCase):
     def setUp(self):
         self.auth_object = AuthObject()
-        self.auth_object.authType = "oauth"
+        self.auth_object.auth_type = "oauth"
 
     def tearDown(self):
         del self.auth_object
