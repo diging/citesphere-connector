@@ -120,5 +120,5 @@ class CitesphereConnector:
                 url = f"{self.api}/v1/groups/{group_id}/items/create"
 
                 self.execute_post_request(url, data, request_files)
-        except Exception as e:
-            print(f"[ERROR] -------- Error during API request with {file_path}: {e}")
+        except Exception:
+            return "Error loading/reading file"
